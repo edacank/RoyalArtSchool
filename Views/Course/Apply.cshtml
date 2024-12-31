@@ -1,0 +1,55 @@
+﻿@model Candidate
+
+
+<div class="display-6">
+    APPLY
+
+</div>
+<form method="post" action="/Course/Apply">
+    <div class="form-group my-2">
+        <label asp-for="Email"></label>
+        <input name="Email"class="form-control" />
+    </div>
+    <div class="form-groupmy-2">
+        <label asp-for="FirstName">First Name</label>
+        <input name="FirstName" class="form-control" />
+    </div>
+    <div class="form-group my-2">
+        <label>Last Name</label>
+        <input name="LastName" class="form-control" />
+    </div>
+    <div class="form-group my-2">
+        <label>Age</label>
+        <select name="Age" class="form-control" />
+            <option value="18-25">18-25</option>
+            <option value="25-35">25-35</option>
+            <option value="35+">35+</option>
+        </select>
+    
+    </div>
+    
+        <fieldset>
+            <legend>Select One Course</legend>
+            <p>
+                <input id="Painting" type="radio" asp-for="SelectedCourseName" value="Painting" />
+                <label>Painting</label>
+            </p>
+            <p>
+                <input id="Sculpture" type="radio" name="SelectedCourseName" value="Sculpture" />
+                <label>Sculpture</label>
+            </p>
+            <p>
+                <input id="Music" type="radio" name="SelectedCourse" value="Music" />
+                <label>Music</label>
+            </p>
+        </fieldset>
+        
+    
+
+
+
+    <div>
+        <button class="btn btn-primary" type="submit">Apply</button>
+        <a class="btn btn-warning" href="/">Home</a>
+    </div>
+</form>
